@@ -1,0 +1,39 @@
+{
+  "license": "Unlicense",
+  "repo": "Anduin2017/HowToCook",
+  "assets": {
+    "shrimp.webp": {
+      "source": "dishes/aquatic/蒜香黄油虾/1.jpg",
+      "url": "https://raw.githubusercontent.com/Anduin2017/HowToCook/3dfa950f6daf0a5b311fc46619f1b559bac980c4/dishes/aquatic/蒜香黄油虾/1.jpg"
+    },
+    "soup.webp": {
+      "source": "dishes/soup/玉米排骨汤/玉米排骨汤.jpeg",
+      "url": "https://raw.githubusercontent.com/Anduin2017/HowToCook/3dfa950f6daf0a5b311fc46619f1b559bac980c4/dishes/soup/玉米排骨汤/玉米排骨汤.jpeg"
+    },
+    "wings.webp": {
+      "source": "dishes/semi-finished/空气炸锅鸡翅中/鸡翅中_1.jpg",
+      "url": "https://raw.githubusercontent.com/Anduin2017/HowToCook/3dfa950f6daf0a5b311fc46619f1b559bac980c4/dishes/semi-finished/空气炸锅鸡翅中/鸡翅中_1.jpg"
+    },
+    "cake.webp": {
+      "source": "dishes/dessert/烤箱版巴斯克芝士蛋糕/烤箱版巴斯克芝士蛋糕.jpg",
+      "url": "https://raw.githubusercontent.com/Anduin2017/HowToCook/3dfa950f6daf0a5b311fc46619f1b559bac980c4/dishes/dessert/烤箱版巴斯克芝士蛋糕/烤箱版巴斯克芝士蛋糕.jpg"
+    },
+    "pork.webp": {
+      "source": "dishes/meat_dish/红烧肉/000.jpg",
+      "url": "https://raw.githubusercontent.com/Anduin2017/HowToCook/3dfa950f6daf0a5b311fc46619f1b559bac980c4/dishes/meat_dish/红烧肉/000.jpg"
+    },
+    "tofu.webp": {
+      "source": "dishes/meat_dish/麻婆豆腐/1.jpeg",
+      "url": "https://raw.githubusercontent.com/Anduin2017/HowToCook/3dfa950f6daf0a5b311fc46619f1b559bac980c4/dishes/meat_dish/麻婆豆腐/1.jpeg"
+    },
+    "drink.webp": {
+      "source": "dishes/drink/百香果橙子特调/soda-version.jpg",
+      "url": "https://raw.githubusercontent.com/Anduin2017/HowToCook/3dfa950f6daf0a5b311fc46619f1b559bac980c4/dishes/drink/百香果橙子特调/soda-version.jpg"
+    },
+    "ribs.webp": {
+      "source": "dishes/meat_dish/糖醋排骨/2.jpeg",
+      "url": "https://raw.githubusercontent.com/Anduin2017/HowToCook/3dfa950f6daf0a5b311fc46619f1b559bac980c4/dishes/meat_dish/糖醋排骨/2.jpeg"
+    }
+  },
+  "commit": "3dfa950f6daf0a5b311fc46619f1b559bac980c4"
+}

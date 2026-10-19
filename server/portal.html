@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7fa">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="集中浏览和打开各项应用与工具。">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233157a4'%3E%3Crect x='3' y='3' width='7' height='7' rx='2'/%3E%3Crect x='14' y='3' width='7' height='7' rx='2'/%3E%3Crect x='3' y='14' width='7' height='7' rx='2'/%3E%3Crect x='14' y='14' width='7' height='7' rx='2'/%3E%3C/svg%3E">
+  <title>功能导航</title>
+  <style>
+    :root{color-scheme:light;--background:#f5f7fa;--surface:#fff;--text:#202b3c;--muted:#667085;--accent:#3157a4;--accent-soft:#eaf0fb;--border:#dce2eb}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100dvh;background:var(--background);color:var(--text);font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    .container{width:min(100% - 64px,1080px);margin-inline:auto}
+    .site-header{border-bottom:1px solid var(--border);background:var(--surface)}
+    .header-inner{min-height:80px;display:flex;align-items:center;gap:12px}
+    .site-mark{display:grid;place-items:center;color:var(--accent)}.site-mark svg{width:26px;height:26px}
+    .site-name{font-size:17px;font-weight:650}
+    main{padding-block:68px max(64px,env(safe-area-inset-bottom))}
+    .intro{margin-bottom:32px}
+    h1{margin:0 0 14px;font-size:clamp(28px,4vw,38px);line-height:1.35;font-weight:650;text-wrap:balance}
+    .intro p{margin:0;color:var(--muted);font-size:15px;line-height:1.8;text-wrap:pretty}
+    .app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
+    .app-link{min-height:216px;display:flex;flex-direction:column;align-items:flex-start;padding:28px;border:1px solid var(--border);border-radius:16px;background:var(--surface);color:inherit;text-decoration:none}
+    .app-link:only-child{max-width:350px;width:100%}
+    .app-link:hover{border-color:var(--accent)}
+    .app-link:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+    .app-icon{display:grid;place-items:center;width:46px;height:46px;margin-bottom:22px;border-radius:12px;background:var(--accent-soft);color:var(--accent)}
+    .app-icon svg{width:24px;height:24px}
+    .app-link h2{margin:0 0 10px;font-size:20px;line-height:1.5;font-weight:650}
+    .app-link p{margin:0 0 26px;color:var(--muted);font-size:14px;line-height:1.8;text-wrap:pretty}
+    .open-link{display:inline-flex;align-items:center;gap:9px;margin-top:auto;color:var(--accent);font-size:14px;font-weight:600}
+    .open-link svg{width:17px;height:17px}
+    @media(max-width:600px){.container{width:calc(100% - 40px)}.header-inner{min-height:70px}main{padding-top:40px}.intro{margin-bottom:26px}.app-grid{grid-template-columns:1fr}.app-link,.app-link:only-child{max-width:none;padding:24px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <span class="site-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+          <rect x="3" y="3" width="7" height="7" rx="2"/>
+          <rect x="14" y="3" width="7" height="7" rx="2"/>
+          <rect x="3" y="14" width="7" height="7" rx="2"/>
+          <rect x="14" y="14" width="7" height="7" rx="2"/>
+        </svg>
+      </span>
+      <span class="site-name">功能导航</span>
+    </div>
+  </header>
+  <main class="container">
+    <div class="intro">
+      <h1>选择一个功能</h1>
+      <p>选择需要的应用或工具，打开对应页面。</p>
+    </div>
+    <nav class="app-grid" aria-label="应用入口">
+      <!-- 新功能在此追加 app-link；各应用的页面和视觉风格保持独立。 -->
+      <a class="app-link" href="/order/">
+        <span class="app-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 3v6m3-6v6M2 3v6c0 4 6 4 6 0M5 12v9m15-18v18m0-18c-5 3-7 8-5 11h5"/>
+          </svg>
+        </span>
+        <h2>点菜</h2>
+        <p>浏览菜品、整理清单，选好今天想吃的饭。</p>
+        <span class="open-link">打开点菜<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
+      </a>
+      <a class="app-link" href="/codelin">
+        <span class="app-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m7 8-4 4 4 4m10-8 4 4-4 4m-3-12-4 16"/>
+          </svg>
+        </span>
+        <h2>Codelin</h2>
+        <p>Agent 代码助手，协助编写、理解和修改代码。</p>
+        <span class="open-link">打开 Codelin<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
+      </a>
+    </nav>
+  </main>
+</body>
+</html>

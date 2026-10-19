@@ -1,0 +1,47 @@
+name: our-kitchen
+services:
+  kitchen:
+    build: .
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:?Run npm run setup and set an HTTPS origin}
+      COOKIE_SECURE: "true"
+      APP_SECRET: ${APP_SECRET:?Missing APP_SECRET}
+      ADMIN_PASSWORD_HASH: ${ADMIN_PASSWORD_HASH:?Missing ADMIN_PASSWORD_HASH}
+      GUEST_ANSWER_HASH: ${GUEST_ANSWER_HASH:?Missing GUEST_ANSWER_HASH}
+      GUEST_QUESTION: ${GUEST_QUESTION:-我们的专属暗号是？}
+      SERVERCHAN_SENDKEY: ${SERVERCHAN_SENDKEY:-}
+      TRUST_PROXY: 172.30.0.2
+      DATA_DIR: /app/data
+    volumes:
+      - kitchen-data:/app/data
+    networks:
+      kitchen-net:
+        ipv4_address: 172.30.0.3
+    # No public application port: only the trusted Caddy proxy can reach it.
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:?Set an HTTPS origin}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    networks:
+      kitchen-net:
+        ipv4_address: 172.30.0.2
+networks:
+  kitchen-net:
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+volumes:
+  kitchen-data:
+  caddy-data:
+  caddy-config:

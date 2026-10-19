@@ -1,0 +1,14 @@
+/* Keep supporting copy legible on the small food cards and pale surfaces. */
+.dish-body>p{color:#756d76;font-size:12px;height:41px;line-height:1.7}
+.dish-time{color:#756d76;font-size:10px}
+.hero p{color:#80556a}
+.search-box input{font-size:12px}
+.category{color:#756d76}
+.category.selected{color:#9f2c54}
+.cart-empty p,.cart-options textarea::placeholder,.cart-row small{color:#756d76}
+.cart-submit>small,.gate-trust{color:#756d76;font-size:10px}
+.gate-form>p,.admin-dish-info p,.admin-toolbar,.order-card-top{color:#756d76}
+.preference{color:#756d76}
+.dish-tag{color:#8f385b}
+.note-count{color:#756d76}
+@media(max-width:700px){.dish-body>p{font-size:11px;height:38px}.cart-options textarea::placeholder{font-size:11px}}

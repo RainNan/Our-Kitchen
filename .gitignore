@@ -1,0 +1,42 @@
+# Private configuration (keep the public template)
+.env
+.env.*
+!.env.example
+.local/
+# Dependencies and generated output
+node_modules/
+dist/
+artifacts/
+test-results/
+coverage/
+*.log
+# Application data, uploads and database journals
+data/
+data-demo/
+uploads/
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-wal
+*.db-shm
+# Private keys, certificates and backups
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+*.cer
+id_rsa*
+id_ed25519*
+*.bak
+*.backup
+*.env.bak*
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+seed-assets/originals/
+seed-assets/ribs-finished.webp
